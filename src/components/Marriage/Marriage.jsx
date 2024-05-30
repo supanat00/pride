@@ -113,7 +113,10 @@ export default function Marriage() {
                 <p className="text-xs text-center text-white font-Prompt">ร่วมทำความเข้าใจการ<span className="">สมรสอย่างเท่าเทียม</span></p>
 
                 {/* Button */}
-                <button className="text-xs text-center text-white font-Prompt mt-16 mb-12">อ่านร่างเนื้อหาฉบับเต็ม</button>
+                <div className="justify-center items-center">
+                    <button className="text-xs text-center text-white font-Prompt mt-16 mb-12 border border-pink px-8 py-2 rounded-lg">อ่านร่างเนื้อหาฉบับเต็ม</button>
+                </div>
+
             </div>
         </div>
 

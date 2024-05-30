@@ -30,7 +30,7 @@ export default function WaitingRing() {
                         setPlayed(false);
                         clearInterval(intervalId);
                     }
-                }, 30);
+                }, 120);
             } else if (reverse) {
                 intervalId = setInterval(() => {
                     if (count > 0) {
@@ -40,7 +40,7 @@ export default function WaitingRing() {
                         setReverse(false);
                         clearInterval(intervalId);
                     }
-                }, 30);
+                }, 120);
             }
         }
 
@@ -132,7 +132,7 @@ export default function WaitingRing() {
                         </p>
                     </div>
                     {/* Animate Ring */}
-                    <div className="waiting-ring relative w-full flex flex-row-reverse"
+                    <div className="waiting-ring w-full flex flex-row justify-center"
                         ref={sequenceRef}>
                         <img
                             src={`/hand-anim-mobile/${count.toString().padStart(4, '0000')}.png`}

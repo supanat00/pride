@@ -23,7 +23,7 @@ export default function Campaign() {
                 scrub: 5,
                 pin: false,
                 pinSpacing: false,
-                markers: true,
+                // markers: true,
                 toggleActions: "play none none none",
             },
         });

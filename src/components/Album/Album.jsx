@@ -10,7 +10,8 @@ import 'swiper/css/pagination'
 
 export default function Album() {
     return (
-        <div className="flex flex-col justify-center items-center w-full">
+        <div style={{ width: '100vw', height: '100vh' }}
+            className="flex flex-col justify-center items-center w-full">
             {/* svg */}
             <div className="mt-24 mb-12">
                 <img src={Mirror} className="w-full" />
