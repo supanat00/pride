@@ -30,7 +30,7 @@ export default function WaitingRing() {
                         setPlayed(false);
                         clearInterval(intervalId);
                     }
-                }, 120);
+                }, 60);
             } else if (reverse) {
                 intervalId = setInterval(() => {
                     if (count > 0) {
@@ -40,7 +40,7 @@ export default function WaitingRing() {
                         setReverse(false);
                         clearInterval(intervalId);
                     }
-                }, 120);
+                }, 60);
             }
         }
 
