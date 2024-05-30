@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import { Necklace, handShow2 } from "../../utils";
 
 import gsap from 'gsap';
@@ -9,7 +8,7 @@ gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Campaign() {
-    const campaign = useRef(null);
+
 
     // Gsap Animations
     useGSAP(() => {
@@ -18,8 +17,8 @@ export default function Campaign() {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".campaign",
-                start: "50% 15%",
-                end: "50% 15%",
+                start: "top 15%",
+                end: "top 15%",
                 scrub: 5,
                 pin: false,
                 pinSpacing: false,
@@ -35,10 +34,10 @@ export default function Campaign() {
 
 
 
-    }, { scope: campaign });
+    }, {});
 
     return (
-        <div id={"campaign"} className="campaign relative flex flex-col w-full p-8 bg-white-100 items-center justify-center" ref={campaign}>
+        <div id={"campaign"} className="campaign relative flex flex-col w-full p-8 bg-white-100 items-center justify-center">
             {/* Header */}
             <div className="our-campaign w-full flex flex-col">
                 <h1 className="text-left text-2xl font-bold leading-mono">SUPPORT <br />

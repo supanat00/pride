@@ -68,11 +68,17 @@ export default function Marriage() {
         handleNumberAnimation();
     }, []);
 
+    const numbersArray = ['200,000', '200,500', '210,000', '200,040', '180,900'];
+    let currentIndex = 0;
+
     const randomizeNumber = () => {
-        let randomNum = Math.floor(Math.random() * 0 + 30000).toString();
-        setRandomNumber(randomNum);
-        console.log(randomNum);
-        return randomNum;
+        const randomNumber = numbersArray[currentIndex];
+        setRandomNumber(randomNumber);
+        console.log(randomNumber);
+
+        currentIndex = (currentIndex + 1) % numbersArray.length;
+
+        return randomNumber;
     };
 
 
