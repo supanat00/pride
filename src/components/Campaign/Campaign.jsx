@@ -66,7 +66,10 @@ export default function Campaign() {
 
                     {/* button */}
                     <div className="mt-6">
-                        <button className="mt-2 w-32 bg-black text-white rounded-2xl py-0.5">click here</button>
+                        <a href="https://line.me/R/ti/p/@836imszb" target="_blank">
+                            <button className="mt-2 w-32 bg-black text-white rounded-2xl py-0.5">click here</button>
+                        </a>
+
                     </div>
 
                 </div>

@@ -120,7 +120,10 @@ export default function Marriage() {
 
                 {/* Button */}
                 <div className="justify-center items-center">
-                    <button className="text-xs text-center text-white font-Prompt mt-16 mb-12 border border-pink px-8 py-2 rounded-lg">อ่านร่างเนื้อหาฉบับเต็ม</button>
+                    <a href="https://www.support1448.org/documents/support-1448-draft.pdf" target="_blank">
+                        <button className="text-xs text-center text-white font-Prompt mt-16 mb-12 border border-pink px-8 py-2 rounded-lg">อ่านร่างเนื้อหาฉบับเต็ม</button>
+                    </a>
+
                 </div>
 
             </div>
