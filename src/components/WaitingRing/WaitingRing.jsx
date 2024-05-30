@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { waitingLogo, Mirror1, Mirror2 } from "../../utils"
+import { waitingLogo, Mirror1, Mirror2, SequenceImages } from "../../utils"
 
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
@@ -24,7 +24,7 @@ export default function WaitingRing() {
             if (!played) {
                 intervalId = setInterval(() => {
                     if (count < 51) {
-                        setCount((prevCount) => prevCount + 1);
+                        setCount((prevCount) => (prevCount + 1) % SequenceImages.length);
                     } else {
                         setCount(51);
                         setPlayed(false);
@@ -34,7 +34,7 @@ export default function WaitingRing() {
             } else if (reverse) {
                 intervalId = setInterval(() => {
                     if (count > 0) {
-                        setCount((prevCount) => prevCount - 1);
+                        setCount((prevCount) => (prevCount - 1) % SequenceImages.length);
                     } else {
                         setCount(0);
                         setReverse(false);
@@ -135,7 +135,7 @@ export default function WaitingRing() {
                     <div className="waiting-ring w-full flex flex-row justify-center"
                         ref={sequenceRef}>
                         <img
-                            src={`/hand-anim-mobile/${count.toString().padStart(4, '0000')}.png`}
+                            src={SequenceImages[count]}
                             width={450}
                             height={450}
                             className="img-sequence w-60 relative z-1"
