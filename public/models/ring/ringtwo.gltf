@@ -1,0 +1,106 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "babylon.js glTF exporter for Autodesk MAYA 2022.5 v20240312.5"
+  },
+  "scene": 0,
+  "scenes": [{ "nodes": [0] }],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Ringall:group2ring_Aringfix3sweep25Ring_neclaceRing_grp"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "TANGENT": 2,
+            "NORMAL": 3,
+            "TEXCOORD_0": 4
+          },
+          "indices": 0,
+          "material": 0
+        }
+      ],
+      "name": "Ringall:group2ring_Aringfix3sweep25Ring_neclaceRing_grp"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5123,
+      "count": 5904,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1190,
+      "max": [0.136878788, 0.411998123, 0.135842219],
+      "min": [-0.128121465, -0.00531494152, -0.119600579],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1190,
+      "type": "VEC4",
+      "name": "accessorTangents"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 14280,
+      "componentType": 5126,
+      "count": 1190,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1190,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    }
+  ],
+  "bufferViews": [
+    { "buffer": 0, "byteLength": 11808, "name": "bufferViewScalar" },
+    {
+      "buffer": 0,
+      "byteOffset": 11808,
+      "byteLength": 28560,
+      "byteStride": 12,
+      "name": "bufferViewFloatVec3"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 40368,
+      "byteLength": 19040,
+      "byteStride": 16,
+      "name": "bufferViewFloatVec4"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 59408,
+      "byteLength": 9520,
+      "byteStride": 8,
+      "name": "bufferViewFloatVec2"
+    }
+  ],
+  "buffers": [{ "uri": "ringtwo.bin", "byteLength": 68928 }],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.123376623, 0.123376623, 0.123376623, 1.0],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.221921667
+      },
+      "name": "phongE1"
+    }
+  ]
+}
