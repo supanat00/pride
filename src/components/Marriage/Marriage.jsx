@@ -1,5 +1,5 @@
 import { LineRGB } from "../../utils";
-
+import CountUp from 'react-countup';
 import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
@@ -10,18 +10,18 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Marriage() {
 
     const numberRef = useRef(null);
-    const [randomNumber, setRandomNumber] = useState('');
+
+    const [counterState, setCounterState] = useState(false);
 
     useGSAP(() => {
         const handleNumberAnimation = () => {
             // Number Random
             gsap.from(
                 numberRef.current,
-                { textContent: randomizeNumber() },
+
                 {
                     duration: 0,
                     ease: 'power2.inOut',
-                    snap: { textContent: 1 },
 
                 },
                 0,
@@ -48,13 +48,18 @@ export default function Marriage() {
                 numberRef.current,
                 {
                     opacity: 0,
-                    textContent: randomizeNumber(),
+                    y: 10,
+
                 },
                 {
+                    onEnter: () => {
+                        console.log('onEnter');
+                        setCounterState(true);
+                    },
+
                     opacity: 1,
                     ease: 'power2.inOut',
                     duration: 0.8,
-                    textContent: '300,000',
                     y: 0,
                 },
                 0
@@ -68,18 +73,8 @@ export default function Marriage() {
         handleNumberAnimation();
     }, []);
 
-    const numbersArray = ['200,000', '200,500', '210,000', '200,040', '180,900'];
-    let currentIndex = 0;
 
-    const randomizeNumber = () => {
-        const randomNumber = numbersArray[currentIndex];
-        setRandomNumber(randomNumber);
-        console.log(randomNumber);
 
-        currentIndex = (currentIndex + 1) % numbersArray.length;
-
-        return randomNumber;
-    };
 
 
 
@@ -96,7 +91,7 @@ export default function Marriage() {
             <div className="number-div w-18 justify-center items-center px-12 py-10">
                 <p className="over text-left text-white leading-none opacity-0">over</p>
                 <p ref={numberRef} className="random-number text-center text-white text-6xl leading-none opacity-0">
-                    {randomNumber}
+                    {counterState && <CountUp start={200000} end={300000} duration={2}></CountUp>}
                 </p>
                 <p className="signature text-right text-white leading-none opacity-0">signatures</p>
             </div>
