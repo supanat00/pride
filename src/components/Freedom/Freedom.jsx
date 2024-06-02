@@ -66,9 +66,9 @@ export default function Freedom() {
                 </div>
 
                 <div className="texts w-1/2 flex flex-col justify-center items-left pl-2 tablet:pl-20">
-                    <h1 className="text-xl tablet:text-4xl labtop:text-6xl font-semibold font-Playfair leading-normal">FREEDOM <br />
+                    <h1 className="text-xl tablet:text-4xl labtop:text-6xl desktop:text-6xl font-semibold font-Playfair leading-normal">FREEDOM <br />
                         COMMITMENT</h1>
-                    <p className="text-base tablet:text-2xl font-normal">Incomplete by design.</p>
+                    <p className="text-base tablet:text-2xl  desktop:text-3xl font-normal">Incomplete by design.</p>
                 </div>
             </div>
 

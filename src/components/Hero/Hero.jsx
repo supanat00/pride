@@ -105,10 +105,10 @@ export default function Hero() {
             {/* Logo */}
             <div style={{ width: '100vw', height: '100vh' }} className="relative flex flex-col w-full justify-center items-center z-20 p-6">
                 <div style={{ height: '15vh' }} className="prideLogo absolute flex justify-center items-center w-full opacity-1 top-0" >
-                    <img src={prideLogo} className="w-24" />
+                    <img src={prideLogo} className="w-24 tablet:w-48" />
                 </div>
                 <div style={{ height: '30vh' }} className="waitingLogo absolute flex justify-center items-center w-full opacity-1 translate-y-0">
-                    <img src={waitingLogo} className="imglogo w-80 md:w-96 z-80" />
+                    <img src={waitingLogo} className="imglogo w-80 tablet:w-96 md:w-96 z-80" />
                 </div>
             </div>
             {/* Ring Present */}
@@ -124,7 +124,7 @@ export default function Hero() {
 
                 </video>
 
-                <div className="ringtexts absolute w-full  -translate-y-0  z-20" >
+                <div className="ringtexts absolute w-full  translate-y-50  z-20" >
                     <Texts />
                 </div>
             </div>
