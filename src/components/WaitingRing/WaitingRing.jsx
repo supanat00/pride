@@ -118,16 +118,16 @@ export default function WaitingRing() {
     }, []);
 
     return (
-        <div className="relative w-full flex flex-col justify-center items-center">
-            <div className='relative w-full' >
+        <div style={{ width: '100vw', height: '100vh' }} className="relative w-full h-full flex flex-col justify-center items-center">
+            <div className='relative w-full h-full' >
                 {/* Show Hand */}
                 <div className="relative flex flex-col w-full justify-center items-center">
                     {/* Texts */}
                     <div className="flex relative w-full justify-center items-center">
-                        <img src={waitingLogo} alt="waitingLogo" className="waitingLogo2 w-44" />
+                        <img src={waitingLogo} alt="waitingLogo" className="waitingLogo2 w-44 tablet:w-96" />
                     </div>
                     <div className="flex relative mt-12 -mb-6">
-                        <p className="wait-text">
+                        <p className="wait-text tablet:text-3xl">
                             the wait is always warth it.
                         </p>
                     </div>
@@ -145,15 +145,16 @@ export default function WaitingRing() {
                     </div>
                 </div>
             </div>
-            <div className='album-mirror relative w-full h-96'>
+            <div
+                className='album-mirror relative w-full h-full'>
                 {/* Mirror 1*/}
-                <div className="Mirror2 absolute flex w-full -mt-2 z-20 ">
+                <div className="Mirror2 absolute flex w-full -mt-2 z-20 h-full">
                     <img src={Mirror1} alt="Mirror1" className="Mirror1 w-full " />
 
                 </div>
                 {/* Mirror 2*/}
                 <div className="Mirror2 absolute flex w-full -mt-2 z-10">
-                    <img src={Mirror2} alt="Mirror2" className="Mirror2 w-full " />
+                    <img src={Mirror2} alt="Mirror2" className="Mirror2 w-full h-full" />
                 </div>
             </div>
         </div>
